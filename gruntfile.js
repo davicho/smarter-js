@@ -22,6 +22,15 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+
+    // grunt-open will open your browser at the project's URL
+    open: {
+      all: {
+        // Gets the port from the connect configuration
+        path: 'http://localhost:3000/',
+        app: 'Google Chrome'
+      }
     }
 
   });
@@ -29,6 +38,7 @@ module.exports = function(grunt) {
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-open');
 
 
   // Default task(s).
